@@ -2,16 +2,7 @@
 
 All notable changes to this script will be documented in this file 🙌🏽
 
-
-
-
-
-
-
-
-
-
-## [1.0.0] - 2025-05-30
+## [1.0.0] 
 ### Initial
-- Basic version of challenge that moves `knight.txt` from the `Battlefield` directory to `Newhome` if it exists, then displays the contents of both directories.
-- Will seek to modify it and make it more dynamic and complex 😎
+- A challenge which requires creating a script to move an existing file `knight.txt` from one directory (`Batllefield`) to a new directory (`Newhome`) and displays the contents of both directories.
+- Will seek to make it more dynamic and complex 😎
