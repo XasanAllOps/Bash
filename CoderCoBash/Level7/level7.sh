@@ -8,7 +8,7 @@ ORANGE='\033[38;5;208m'
 NC='\033[0m'
 
 # -- '-p' allows you to supply a prompt directly to read
-# -- '-e' enables interpretation of
+# -- '-e' enables interpretation of special characters
 read -p "Please enter directory name: " dir_name
 
 if [ -z "$dir_name" ]; then
