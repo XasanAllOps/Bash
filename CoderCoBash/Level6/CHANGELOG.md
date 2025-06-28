@@ -1,3 +1,7 @@
+# Changelog
+
+All notable changes to this script will be documented in this file 🙌🏽
+
 ## [1.0.0]
 ### Initial
 
