@@ -12,5 +12,7 @@ All notable changes to this script will be documented in this file 🙌🏽
 - While the original challenge was based on using predefined paths and values, I chose to make the script more dynamic by accepting user input at runtime.
 - Also added clear inline comments explaining the use of `grep -l` to list matching files — similar to how I annotated file handling in Level 7 using `ls`, `sort`, and `awk` — to make the script more understandable and maintainable.
 
+---
+
 
 
