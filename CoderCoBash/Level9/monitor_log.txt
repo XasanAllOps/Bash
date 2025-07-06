@@ -1,4 +1,3 @@
-[MODIFIED/CREATED] '/Users/leeban/Desktop/Bashscripting/CoderCoBash/Level9/test_folder/1test.log' at 06-07-2025 02:49:23
-[MODIFIED/CREATED] '/Users/leeban/Desktop/Bashscripting/CoderCoBash/Level9/test_folder/2test.log' at 06-07-2025 02:49:30
-[DELETED] '/Users/leeban/Desktop/Bashscripting/CoderCoBash/Level9/test_folder/1test.log' at 06-07-2025 02:49:39
-[DELETED] '/Users/leeban/Desktop/Bashscripting/CoderCoBash/Level9/test_folder/2test.log' at 06-07-2025 02:49:39
+[DELETED] 'test_folder/1test.log' at 06-07-2025 03:18:02
+[DELETED] 'test_folder/2test.log' at 06-07-2025 03:18:11
+[MODIFIED/CREATED] 'test_folder/test.log' at 06-07-2025 03:18:35

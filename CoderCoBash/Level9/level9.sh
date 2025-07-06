@@ -43,15 +43,21 @@ fswatch -r "$dir_name" | while read file; do
     continue
   fi
 
+  # --- Shorten path to start from monitored directory
+  short_path="${file#*${dir_name}/}"
+  if [[ "$short_path" == "$file" ]]; then
+    short_path="$filename"
+  fi
+
   # --- Check if the file still exists
   if [ -e "$file" ]; then
     # --- Log modification or creation to console and file
-    echo -e "${GREEN}[MODIFIED/CREATED]${NC} '$file' at $timestamp"
-    echo "[MODIFIED/CREATED] '$file' at $timestamp" >> "$log_file"
+    echo -e "${GREEN}[MODIFIED/CREATED]${NC} '$dir_name/$short_path' at $timestamp"
+    echo "[MODIFIED/CREATED] '$dir_name/$short_path' at $timestamp" >> "$log_file"
   else
     # --- Log deletion to console and file
-    echo -e "${RED}[DELETED]${NC} '$file' at $timestamp"
-    echo -e "[DELETED] '$file' at $timestamp" >> "$log_file"
+    echo -e "${RED}[DELETED]${NC} '$dir_name/$short_path' at $timestamp"
+    echo -e "[DELETED] '$dir_name/$short_path' at $timestamp" >> "$log_file"
   fi
 done
 
