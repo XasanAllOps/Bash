@@ -3,7 +3,7 @@
 All notable changes to this script will be documented in this file 🙌🏽
 
 ## [1.1.0]
-### Improvement
+### Improvement 🖋️
 
 - Shortened logged file paths to start from the monitored directory for cleaner and more readable logs (e.g., showing `test_folder/test.log` instead of the full absolute path).
 
