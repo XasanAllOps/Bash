@@ -6,17 +6,18 @@ YELLOW='\033[0;33m'
 BLUE='\033[0;34m'
 NC='\033[0m'
 
-mkdir -p Battlefield
-touch Battlefield/knight.txt Battlefield/rogue.txt Battlefield/captain.txt
-if [ -f Battlefield/knight.txt ]; then
-	mkdir -p Newhome
-	mv Battlefield/knight.txt Newhome
-else
-	echo -e "${RED}This file does not exist in Battlefield directory${NC}"
-fi
+move_file (){
+	local file_name=$1
+	local send_to_dir=$2
 
-echo -e "${GREEN}Contents of Battlefield${NC}"
-ls Battlefield
+	if [[ -f $file_name ]]; then
+		mkdir -p "$send_to_dir"
+		mv "$file_name" "$send_to_dir/"
+		echo -e "${GREEN}You have sucessfully moved${NC} '$file_name' ${GREEN}to${NC} '$send_to_dir'"
 
-echo -e "${GREEN}Contents of Newhome${NC}"
-ls Newhome
+	else
+		echo -e "${RED}Error: Filename '$file_name' does not exist!${NC}"
+		return 1
+	fi
+}
+move_file "$1" "$2"
