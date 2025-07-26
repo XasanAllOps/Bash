@@ -24,9 +24,12 @@ fi
 if [ ! -d "${dir_name}" ]; then
   echo -e "${RED}This directory '${dir_name}' does not exist ⛔️${NC}"
   exit 1
+fi
+
+extract=$(grep -l "${key_word}" "${dir_name}"/*.log 2>/dev/null)
+
+if [ -z "$extract" ]; then
+  echo -e "${YELLOW}No log files in${NC} '${dir_name}' ${YELLOW}contain the keyword:${NC} '${key_word}'"
 else
-  extract=$(grep -l ${key_word} ${dir_name}/*.log)
-  # -- 'grep'is a command-line tool used to search for patterns (like words & phrases) within files
-  # -- 'grep -l' shows only filenames with matches example => grep -l "hello" file.log or folder/*.log
-  echo -e "${GREEN}Here are the log files located in this '${dir_name}' containing the keyword '${key_word}'${NC}\n${extract}"
-fi 
+  echo -e "${GREEN}Here are the log files located in '${dir_name}' containing the keyword '${key_word}':${NC}\n${extract}"
+fi
